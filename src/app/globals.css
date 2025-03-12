@@ -2,3 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --primary: #3B3B3B;
+    --secondary: #585660;
+    /* Colors */
+    --neutral-500: #737373;
+    --neutral-700: #404040;
+    --gray-medium: #3B3B3B;
+
+    /* Text */
+    --text-primary: #3B3B3B;
+    --text-secondary: #585660;
+    --text-tertiary: #666175;
+    --background: #3B3B3B;
+
+    /* Surfaces */
+    --surface-primary: #1f1f1f;
+    --surface-secondary: #EEEEEE;
+
+    /* Stroke */
+    --stroke-primary: #3B3B3B;
+    --stroke-secondary: #EEEEEE;
+    --stroke-tertiary: #EFEDF3;
+
+    /* Icon */
+    --icon-primary: #8F8F8F;
+    --icon-active: #585660;
+
+    select option {
+      @apply text-primary;
+    }
+    
+    select:focus option:checked {
+      @apply bg-surface-secondary;
+    }
+  }
+}
+
+/* #585660 -> GamerShop */
