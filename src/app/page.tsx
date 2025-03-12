@@ -1,7 +1,20 @@
+import { AtSelect } from "@/components/atoms/AtSelect";
+
 export default async function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24 font-bold text-4xl text-blue-600'>
-      Hello, world!
+    <main className='flex min-h-full px-6 md:px-32'>
+      <div className="flex flex-col min-w-full gap-8 py-6 md:py-12">
+        <h2 className="text-primary font-bold text-xl md:text-2xl">TOP SELLERS</h2>
+        
+        <div className="flex flex-row gap-6 min-w-full md:min-w-fit md:max-w-fit items-center md:self-end">
+          <label htmlFor="genre" className="text-xs font-bold text-primary">Genre</label>
+          <div className="h-[22px] w-px border-solid border-r border-primary" />
+          <AtSelect id="genre" name="genre" options={[
+            { id: "1", value: "", label: "All" },
+            { id: "2", value: "a", label: "a" },
+          ]} />
+        </div>
+      </div>
     </main>
   )
 }
