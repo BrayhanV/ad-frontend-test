@@ -4,8 +4,11 @@ export const DEFAULT_GENRE = "All";
 
 export const getGames = async ({ genre, page }: GetGamesParams): Promise<GetGamesResponse> => {
   try {
+    console.log({page})
     const genreQuery = genre && genre !== DEFAULT_GENRE ? `${genre}` : "";
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/games?genre=${genreQuery}&page=${page}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/games?genre=${genreQuery}&page=${page}`, {
+      cache: 'no-store'
+    });
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -14,7 +17,6 @@ export const getGames = async ({ genre, page }: GetGamesParams): Promise<GetGame
     return await response.json();
   } catch (error) {
     console.error("Error fetching games:", error);
-    // Puedes devolver un valor por defecto o propagar el error
     return { 
       games: [],
       availableFilters: [], 
