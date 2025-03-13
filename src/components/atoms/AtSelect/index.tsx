@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import SelectArrow from '../../../public/select-arrow.svg';
+import SelectArrow from '../../../../public/select-arrow.svg';
 import { AtSelectProps } from './types';
 
 export const AtSelect = ({ id, name, options, value, onChange }: AtSelectProps) => {

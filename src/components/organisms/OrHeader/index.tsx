@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import CartIcon from '/../../public/cart.svg';
+import CartIcon from '../../../../public/cart.svg';
 import Link from 'next/link';
 
 export const OrHeader = () => {
