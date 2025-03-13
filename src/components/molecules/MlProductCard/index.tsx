@@ -8,7 +8,7 @@ export const MlProductCard = ({name, price, image, genre}: Game) => {
       <figure>
         <img 
           className="w-full h-[240px] rounded-t-2xl"
-          src={image ? image : "/no-image.png"} 
+          src={image} 
           alt={name} 
         />
       </figure>

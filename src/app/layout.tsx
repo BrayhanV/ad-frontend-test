@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { OrHeader } from "@/components/organisms/OrHeader";
+import { OrFooter } from "@/components/organisms/OrFooter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <OrHeader />
         {children}
+        <OrFooter />
       </body>
     </html>
   );
