@@ -1,6 +1,6 @@
 import { Game } from "@/utils/endpoint"
-import { AtButton } from "../atoms/AtButton"
-import { AtButtonColor, AtButtonVariant } from "@/config/AtButton.config"
+import { AtButton } from "../../atoms/AtButton"
+import { AtButtonColor, AtButtonVariant } from "@/components/atoms/AtButton/config"
 
 export const MlProductCard = ({name, price, image, genre}: Game) => {
   return (  

@@ -1,5 +1,5 @@
+import { MlProductCard } from "@/components/molecules/MlProductCard";
 import { Game } from "@/utils/endpoint";
-import { MlProductCard } from "../molecules/MlProductCard";
 
 interface OrProductListingProps {
   products: Game[];

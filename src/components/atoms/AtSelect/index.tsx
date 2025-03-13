@@ -1,18 +1,16 @@
+'use client';
 import Image from 'next/image';
 import SelectArrow from '../../../public/select-arrow.svg';
+import { AtSelectProps } from './types';
 
-interface AtSelectProps {
-  id: string;
-  name: string;
-  options: string[];
-}
-
-export const AtSelect = ({ id, name, options }: AtSelectProps) => {
+export const AtSelect = ({ id, name, options, value, onChange }: AtSelectProps) => {
   return (
     <div className="relative w-full">
       <select 
         id={id}
         name={name}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
         className="w-full md:min-w-[205px] bg-transparent border-none appearance-none p-4 focus:outline-none text-primary"
       >
         {options.map((option) => (
