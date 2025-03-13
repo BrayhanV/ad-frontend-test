@@ -15,7 +15,10 @@ const config: Config = {
       },
       fontSize: {
         "area-normal": ["24px", "24px"],
-        xs: ["20px", "24px"],
+        xs: ["14px", "16px"],
+        sm: ["16px", "16px"],
+        base: ["18px", "20px"],
+        lg: ["20px", "24px"],
         xl: ["24px", "28px"], 
         "2xl": ["36px", "40px"]
       },
@@ -23,8 +26,8 @@ const config: Config = {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         neutral: {
-          500: "var(--color-neutral-500)",
-          700: "var(--color-neutral-700)",
+          500: "var(--neutral-500)",
+          700: "var(--neutral-700)",
         },
         surface: {
           primary: "var(--surface-primary)",
@@ -32,8 +35,9 @@ const config: Config = {
         }
       },
       stroke: {
-        primary: "var(--icon-primary)",
-        active: "var(--icon-active)",
+        primary: "var(--stroke-primary)",
+        secondary: "var(--stroke-secondary)",
+        active: "var(--stroke-active)",
       },
     },
   },

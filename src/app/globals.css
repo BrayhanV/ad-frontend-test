@@ -22,13 +22,9 @@
     --surface-secondary: #EEEEEE;
 
     /* Stroke */
-    --stroke-primary: #3B3B3B;
+    --stroke-primary: #8F8F8F;
     --stroke-secondary: #EEEEEE;
-    --stroke-tertiary: #EFEDF3;
-
-    /* Icon */
-    --icon-primary: #8F8F8F;
-    --icon-active: #585660;
+    --stroke-active: #585660;
 
     select option {
       @apply text-primary;
