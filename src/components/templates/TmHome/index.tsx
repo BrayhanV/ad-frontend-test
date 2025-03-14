@@ -1,11 +1,11 @@
 'use client';
+import { Product } from "@/app/models/product";
 import useCartStore from "@/app/stores/cart";
 import { AtSelect } from "@/components/atoms/AtSelect";
 import { OrProductListing } from "@/components/organisms/OrProductListing";
 import { useAsyncState } from "@/hooks/useAsyncState";
 import { DEFAULT_GENRE, getGames } from "@/services/games";
 import { GetGamesParams, GetGamesResponse } from "@/services/games/types";
-import { Game } from "@/utils/endpoint";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
 import { useShallow } from "zustand/shallow";
@@ -15,7 +15,7 @@ export const TmHome = () => {
   const searchParams = useSearchParams();
   const [page, setPage] = useState(1);
   const { games, addGame, removeGame } = useCartStore(useShallow(state => ({
-    games: state.games,
+    games: state.products,
     addGame: state.addGame,
     removeGame: state.removeGame,
   })));
@@ -66,7 +66,7 @@ export const TmHome = () => {
     setPage(nextPage);
   }, [page, selectedGenre, fetchMore]);
 
-  const handleAddToCart = useCallback((game: Game) => {
+  const handleAddToCart = useCallback((game: Product) => {
     if(games.get(game.id)) {
       removeGame(game.id);
     } else {

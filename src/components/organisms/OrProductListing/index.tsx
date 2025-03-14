@@ -6,7 +6,7 @@ import { OrProductListingProps } from "./types";
 import useCartStore from "@/app/stores/cart";
 
 export const OrProductListing = ({ products, loading, onLoadMore, onAddProductToCart }: OrProductListingProps) => {
-  const games = useCartStore(state => state.games);
+  const games = useCartStore(state => state.products);
 
   return (
     <section className="flex flex-col py-8 md:py-12 gap-12">

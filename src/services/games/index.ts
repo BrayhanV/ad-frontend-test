@@ -1,4 +1,6 @@
+import { GameProduct } from "@/app/models/GameProduct";
 import { GetGamesParams, GetGamesResponse } from "./types";
+import { Game } from "@/utils/endpoint";
 
 export const DEFAULT_GENRE = "All";
 
@@ -13,7 +15,12 @@ export const getGames = async ({ genre, page }: GetGamesParams): Promise<GetGame
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     
-    return await response.json();
+    const data = await response.json();
+
+    return {
+      ...data,
+      games: data.games.map((game: Game) => new GameProduct(game)), 
+    };
   } catch (error) {
     console.error("Error fetching games:", error);
     return { 

@@ -14,7 +14,7 @@ export const MlProductCard = ({ product, isProductInCart, onClickButton }: MlPro
       </figure>
       <div className="flex flex-col gap-3">
         <p className="font-bold text-sm text-neutral-500 tracking-normal">
-          {product.genre.toUpperCase()}
+          {product.label.toUpperCase()}
         </p>
         <div className="flex flex-row justify-between items-start gap-2">
           <h2 className="text-base font-bold tracking-wide">{product.name}</h2>

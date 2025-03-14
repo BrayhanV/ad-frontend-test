@@ -1,12 +1,11 @@
-import { Game } from "@/utils/endpoint";
-
+import { Product } from "@/app/models/product";
 export type CartState = {
-  games: Map<string, Game>;
+  products: Map<string, Product>;
   total: number;
 }
 
 export type CartActions = {
-  addGame: (game: Game) => void;
+  addGame: (game: Product) => void;
   removeGame: (gameId: string) => void;
   clearCart: () => void;
 }

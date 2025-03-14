@@ -1,10 +1,10 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { CartState, CartStore } from './types';
-import { Game } from '@/utils/endpoint';
+import { Product } from '@/app/models/product';
 
 const defaultInitState: CartState = {
-  games: new Map<string, Game>(),
+  products: new Map<string, Product>(),
   total: 0,
 };
 
@@ -13,20 +13,20 @@ const useCartStore = create<CartStore>()(
       (set) => ({
         ...defaultInitState,
         addGame: (game) => set((state) => {
-          const newGames = new Map(state.games).set(game.id, game);
+          const newGames = new Map(state.products).set(game.id, game);
           return {
-            games: newGames,
+            products: newGames,
             total: state.total + game.price
           };
         }),
         removeGame: (gameId) => set((state) => {
-          const game = state.games.get(gameId);
+          const game = state.products.get(gameId);
           if (!game) return state;
 
-          const newGames = new Map(state.games);
+          const newGames = new Map(state.products);
           newGames.delete(gameId);
           return {
-            games: newGames,
+            products: newGames,
             total: state.total - game.price
           };
         }),
@@ -35,7 +35,7 @@ const useCartStore = create<CartStore>()(
       {
         name: 'cart-storage',
         partialize: (state) => ({ 
-          games: new Map(state.games),
+          games: new Map(state.products),
           total: state.total
         }),
       }

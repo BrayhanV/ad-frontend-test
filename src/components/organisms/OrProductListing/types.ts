@@ -1,8 +1,8 @@
-import { Game } from "@/utils/endpoint";
+import { Product } from "@/app/models/product";
 
 export interface OrProductListingProps {
-  products: Game[];
+  products: Product[];
   loading?: boolean;
   onLoadMore?: () => void;
-  onAddProductToCart: (product: Game) => void;
+  onAddProductToCart: (product: Product) => void;
 }

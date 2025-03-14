@@ -1,7 +1,7 @@
-import { Game } from "@/utils/endpoint";
+import { Product } from "@/app/models/product";
 
 export interface MlProductCardProps {
-  product: Game;
+  product: Product;
   isProductInCart: boolean;
-  onClickButton: (product: Game) => void;
+  onClickButton: (product: Product) => void;
 }
