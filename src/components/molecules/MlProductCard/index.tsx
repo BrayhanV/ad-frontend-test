@@ -1,17 +1,20 @@
 import { AtButton } from "../../atoms/AtButton"
 import { AtButtonColor, AtButtonVariant } from "@/components/atoms/AtButton/config"
 import { MlProductCardProps } from "./types";
+import { MlProductImage } from "../MlProductImage";
+import { MlProductImageVariant } from "../MlProductImage/config";
+import { MlProductImageNewLabel } from "../MlProductImage/type";
 
 export const MlProductCard = ({ product, isProductInCart, onClickButton }: MlProductCardProps) => {
   return (  
     <article className="w-full h-fit md:w-[380px] flex flex-col rounded-2xl overflow-hidden p-6 gap-5 border-stroke-secondary border-[0.5px]">
-      <figure>
-        <img 
-          className="w-full h-[240px] rounded-t-2xl"
-          src={product.image} 
-          alt={product.name} 
-        />
-      </figure>
+      <MlProductImage 
+        variant={MlProductImageVariant.CATALOG} 
+        newLabel={MlProductImageNewLabel.NEW}
+        isNew={product.isNew} 
+        src={product.image} 
+        alt={product.name} 
+      />
       <div className="flex flex-col gap-3">
         <p className="font-bold text-sm text-neutral-500 tracking-normal">
           {product.label.toUpperCase()}

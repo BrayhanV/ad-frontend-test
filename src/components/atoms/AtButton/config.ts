@@ -5,8 +5,8 @@ export enum AtButtonVariant {
 }
 
 export enum AtButtonColor {
-  PRIMARY = 'bg-primary',
-  SECONDARY = 'bg-secondary',
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
 }
 
 export const AtButtonClasses = { 

@@ -5,8 +5,8 @@ export type CartState = {
 }
 
 export type CartActions = {
-  addGame: (game: Product) => void;
-  removeGame: (gameId: string) => void;
+  addProduct: (game: Product) => void;
+  removeProduct: (gameId: string) => void;
   clearCart: () => void;
 }
 

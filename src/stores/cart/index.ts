@@ -12,14 +12,14 @@ export const useCartStore = create<CartStore>()(
   persist(
     (set) => ({
       ...defaultInitState,
-      addGame: (game) => set((state) => {
+      addProduct: (game) => set((state) => {
         const newGames = new Map(state.products).set(game.id, game);
         return {
           products: newGames,
           total: state.total + game.price,
         };
       }),
-      removeGame: (gameId) => set((state) => {
+      removeProduct: (gameId) => set((state) => {
         const game = state.products.get(gameId);
         if (!game) return state;
 

@@ -1,5 +1,5 @@
 'use client';
-import { Product } from "@/models/product";
+import { Product } from "@/models/Product";
 import { AtSelect } from "@/components/atoms/AtSelect";
 import { OrProductListing } from "@/components/organisms/OrProductListing";
 import { useAsyncState } from "@/hooks/useAsyncState";
@@ -16,8 +16,8 @@ export const TmHome = () => {
   const [page, setPage] = useState(1);
   const { games, addGame, removeGame } = useCartStore(useShallow(state => ({
     games: state.products,
-    addGame: state.addGame,
-    removeGame: state.removeGame,
+    addGame: state.addProduct,
+    removeGame: state.removeProduct,
   })));
 
   const selectedGenre = useMemo(() => {
