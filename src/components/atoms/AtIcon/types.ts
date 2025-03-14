@@ -4,4 +4,5 @@ export interface AtIconProps {
   width?: number;
   height?: number;
   priority?: boolean;
+  onClick?: () => void;
 }

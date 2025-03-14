@@ -3,16 +3,24 @@ import MlLink from "@/components/molecules/MlLink"
 import { OrOrderSummary } from "@/components/organisms/OrOrderSummary"
 import { TmCartProductLabels, TmCartTitles } from "./types"
 import { useShallow } from "zustand/shallow"
-import { useMemo } from "react"
+import { useCallback, useMemo } from "react"
 import { useCartStore } from "@/stores/cart"
+import { MlCardBasket } from "@/components/molecules/MlCardBasket"
+import { Product } from "@/models/Product"
 
 export const TmCart = () => {
-  const { products, total } = useCartStore(useShallow(state => ({
+  const { products, removeProduct } = useCartStore(useShallow(state => ({
     products: state.products,
-    total: state.total
+    total: state.total,
+    removeProduct: state.removeProduct
   })))
 
   const productsArray = useMemo(() => Array.from(products.values()), [products])
+
+  const handleRemoveProduct = useCallback((product: Product) => {
+    removeProduct(product.id)
+  }, [removeProduct])
+
 
   return (
     <>
@@ -34,7 +42,9 @@ export const TmCart = () => {
 
         <div className="flex flex-col md:flex-row gap-12 md:gap-20">
           <div className="flex flex-col gap-0">
-            Product List ${total}
+            {productsArray.map(product => (
+              <MlCardBasket key={product.id} product={product} onClickButton={handleRemoveProduct} />
+            ))}
           </div>
 
           <OrOrderSummary />

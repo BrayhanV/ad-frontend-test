@@ -11,7 +11,7 @@ export const MlProductImage = ({ src, alt, isNew, newLabel, variant }: MlProduct
       )}
       <figure>
         <img 
-          className={`${MlProductImageClasses[variant ?? MlProductImageVariant.CATALOG]}`}
+          className={`object-cover ${MlProductImageClasses[variant ?? MlProductImageVariant.CATALOG]}`}
           src={src} 
           alt={alt} 
         />

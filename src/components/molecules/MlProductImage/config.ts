@@ -5,5 +5,5 @@ export enum MlProductImageVariant {
 
 export const MlProductImageClasses = {
   [MlProductImageVariant.CATALOG]: "w-full h-[240px] rounded-t-2xl",
-  [MlProductImageVariant.CART]: "w-[259px] p-2",
+  [MlProductImageVariant.CART]: "min-w-[259px] md:w-[256px] h-[136px] md:h-[156px]",
 }
