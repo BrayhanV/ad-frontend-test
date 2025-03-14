@@ -4,7 +4,6 @@ export const DEFAULT_GENRE = "All";
 
 export const getGames = async ({ genre, page }: GetGamesParams): Promise<GetGamesResponse> => {
   try {
-    console.log({page})
     const genreQuery = genre && genre !== DEFAULT_GENRE ? `${genre}` : "";
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/games?genre=${genreQuery}&page=${page}`, {
       cache: 'no-store'

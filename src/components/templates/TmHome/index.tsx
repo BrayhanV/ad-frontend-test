@@ -1,16 +1,24 @@
 'use client';
+import useCartStore from "@/app/stores/cart";
 import { AtSelect } from "@/components/atoms/AtSelect";
 import { OrProductListing } from "@/components/organisms/OrProductListing";
 import { useAsyncState } from "@/hooks/useAsyncState";
 import { DEFAULT_GENRE, getGames } from "@/services/games";
 import { GetGamesParams, GetGamesResponse } from "@/services/games/types";
+import { Game } from "@/utils/endpoint";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
+import { useShallow } from "zustand/shallow";
 
 export const TmHome = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [page, setPage] = useState(1);
+  const { games, addGame, removeGame } = useCartStore(useShallow(state => ({
+    games: state.games,
+    addGame: state.addGame,
+    removeGame: state.removeGame,
+  })));
 
   const selectedGenre = useMemo(() => {
     const genre = searchParams.get('genre');
@@ -58,6 +66,14 @@ export const TmHome = () => {
     setPage(nextPage);
   }, [page, selectedGenre, fetchMore]);
 
+  const handleAddToCart = useCallback((game: Game) => {
+    if(games.get(game.id)) {
+      removeGame(game.id);
+    } else {
+      addGame(game);
+    }
+  }, [games, addGame, removeGame]);
+
   return (
     <main className='flex flex-col min-h-full px-6 md:px-32'>
       <div className="flex flex-col min-w-full gap-8 py-6 md:py-12">
@@ -80,6 +96,7 @@ export const TmHome = () => {
       <OrProductListing
         loading={loading}
         products={gamesData?.games ?? []} 
+        onAddProductToCart={handleAddToCart}
         onLoadMore={canLoadMore ? handleLoadMore : undefined}
       />
     </main>
