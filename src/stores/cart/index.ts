@@ -1,14 +1,14 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { CartState, CartStore } from './types';
-import { Product } from '@/app/models/product';
+import { Product } from '@/models/product';
 
 const defaultInitState: CartState = {
   products: new Map<string, Product>(),
   total: 0,
 };
 
-const useCartStore = create<CartStore>()(
+export const useCartStore = create<CartStore>()(
   persist(
     (set) => ({
       ...defaultInitState,
@@ -46,5 +46,3 @@ const useCartStore = create<CartStore>()(
     }
   )
 );
-
-export default useCartStore;

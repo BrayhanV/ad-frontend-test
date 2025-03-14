@@ -1,4 +1,4 @@
-import { Product } from "@/app/models/product";
+import { Product } from "@/models/product";
 export interface GetGamesParams {
   genre: string;
   page: number;

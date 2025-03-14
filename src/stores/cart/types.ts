@@ -1,4 +1,4 @@
-import { Product } from "@/app/models/product";
+import { Product } from "@/models/product";
 export type CartState = {
   products: Map<string, Product>;
   total: number;

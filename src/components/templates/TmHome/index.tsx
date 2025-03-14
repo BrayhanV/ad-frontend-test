@@ -1,6 +1,5 @@
 'use client';
-import { Product } from "@/app/models/product";
-import useCartStore from "@/app/stores/cart";
+import { Product } from "@/models/product";
 import { AtSelect } from "@/components/atoms/AtSelect";
 import { OrProductListing } from "@/components/organisms/OrProductListing";
 import { useAsyncState } from "@/hooks/useAsyncState";
@@ -9,6 +8,7 @@ import { GetGamesParams, GetGamesResponse } from "@/services/games/types";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
 import { useShallow } from "zustand/shallow";
+import { useCartStore } from "@/stores/cart";
 
 export const TmHome = () => {
   const router = useRouter();

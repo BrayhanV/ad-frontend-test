@@ -1,4 +1,4 @@
-import { GameProduct } from "@/app/models/GameProduct";
+import { GameProduct } from "@/models/GameProduct";
 import { GetGamesParams, GetGamesResponse } from "./types";
 import { Game } from "@/utils/endpoint";
 

@@ -1,4 +1,4 @@
-import { Product } from "@/app/models/product";
+import { Product } from "@/models/product";
 
 export enum OrProductListingButtonText {
   SEE_MORE = "SEE MORE",
