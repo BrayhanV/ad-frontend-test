@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      letterSpacing: {
+        wide: "0.4px",
+      },
       fontSize: {
         "area-normal": ["24px", "24px"],
         xs: ["14px", "16px"],

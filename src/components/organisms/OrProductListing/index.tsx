@@ -4,8 +4,8 @@ import { AtButtonColor } from "@/components/atoms/AtButton/config";
 import { MlProductCard } from "@/components/molecules/MlProductCard";
 import { MlProductCardSkeleton } from "@/components/molecules/MlProductCard/skeleton";
 import { OrProductListingProps } from "./types";
-import useCartStore from "@/app/stores/cart";
 import { useCallback, useRef } from "react";
+import { useCartStore } from "@/stores/cart";
 
 export const OrProductListing = ({ products, loading, onLoadMore, onAddProductToCart }: OrProductListingProps) => {
   const games = useCartStore(state => state.products);
