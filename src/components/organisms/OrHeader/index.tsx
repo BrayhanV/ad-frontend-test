@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { OrHeaderLogoText, OrHeaderProps } from './type';
+import MlLink from '@/components/molecules/MlLink';
 
 export const OrHeader = ({ icons }: OrHeaderProps) => {
   return (
@@ -10,16 +10,10 @@ export const OrHeader = ({ icons }: OrHeaderProps) => {
         <ul className='flex space-x-4'>
           {icons.map((icon, index) => (
             <li key={index}>
-              <Link href={icon.link}>
-                <Image
-                  src={icon.icon}
-                  alt="Logo"
-                  width={20}
-                  height={20.02}
-                  className="hover:opacity-75 transition-opacity"
-                  priority
-                />
-              </Link>
+              <MlLink 
+                iconProps={{ src: icon.icon, alt: icon.icon }} 
+                href={icon.link}
+              />
             </li>
           ))}
         </ul>
