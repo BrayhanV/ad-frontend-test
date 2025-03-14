@@ -1,12 +1,22 @@
+'use client';
 import { AtButton } from "@/components/atoms/AtButton";
 import { AtButtonColor } from "@/components/atoms/AtButton/config";
 import { MlProductCard } from "@/components/molecules/MlProductCard";
 import { MlProductCardSkeleton } from "@/components/molecules/MlProductCard/skeleton";
 import { OrProductListingProps } from "./types";
 import useCartStore from "@/app/stores/cart";
+import { useCallback, useRef } from "react";
 
 export const OrProductListing = ({ products, loading, onLoadMore, onAddProductToCart }: OrProductListingProps) => {
   const games = useCartStore(state => state.products);
+  const bottomRef = useRef<HTMLDivElement>(null);
+
+  const handleLoadMore = useCallback(async () => {
+    if(onLoadMore) {
+      await onLoadMore();
+      bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [onLoadMore]);
 
   return (
     <section className="flex flex-col py-8 md:py-12 gap-12">
@@ -16,11 +26,12 @@ export const OrProductListing = ({ products, loading, onLoadMore, onAddProductTo
         )) }
         {loading && <MlProductCardSkeleton />}
       </div>
+      <div ref={bottomRef} />
       {!!products.length && ( 
-        <AtButton 
+        <AtButton
           color={AtButtonColor.SECONDARY} 
           disabled={!onLoadMore || loading} 
-          onClick={onLoadMore}
+          onClick={handleLoadMore}
         >
           SEE MORE
         </AtButton>

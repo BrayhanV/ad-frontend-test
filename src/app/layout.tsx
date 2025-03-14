@@ -18,9 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
         <OrHeader />
-        {children}
+        <main className='flex flex-col px-6 md:px-32'>
+          {children}
+        </main>
         <OrFooter />
       </body>
     </html>
