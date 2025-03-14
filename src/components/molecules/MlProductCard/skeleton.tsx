@@ -1,7 +1,6 @@
 export const MlProductCardSkeleton = () => {
   return (
-    [...Array(3)].map((_, index) => (
-      <article key={index} className="w-full h-fit md:w-[380px] flex flex-col rounded-2xl overflow-hidden p-6 gap-5 border-stroke-secondary border-[0.5px] bg-gray-200">
+      <article className="w-full h-fit md:w-[380px] flex flex-col rounded-2xl overflow-hidden p-6 gap-5 border-stroke-secondary border-[0.5px] bg-gray-200">
         <div className="w-full h-[240px] rounded-t-2xl bg-gray-300" />
         <div className="flex flex-col gap-3">
           <div className="w-full h-[16px] bg-gray-300" />
@@ -12,6 +11,5 @@ export const MlProductCardSkeleton = () => {
         </div>
         <div className="w-full h-[56px] bg-gray-300" />
       </article>
-    ))
   );
 }

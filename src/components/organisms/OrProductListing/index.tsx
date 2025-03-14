@@ -13,8 +13,8 @@ export const OrProductListing = ({ products, loading, onLoadMore, onAddProductTo
 
   const handleLoadMore = useCallback(async () => {
     if(onLoadMore) {
-      await onLoadMore();
-      bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+      onLoadMore();
+      setTimeout(() => bottomRef.current?.scrollIntoView({ behavior: "smooth", }), 100);
     }
   }, [onLoadMore]);
 
@@ -24,9 +24,15 @@ export const OrProductListing = ({ products, loading, onLoadMore, onAddProductTo
         {products.map((product) => (
           <MlProductCard key={product.id} product={product} isProductInCart={!!games.get(product.id)} onClickButton={onAddProductToCart} />
         )) }
-        {loading && <MlProductCardSkeleton />}
+        {loading && (
+          <>
+            <div ref={bottomRef} />
+            {[...Array(3)].map((_, index) => (
+              <MlProductCardSkeleton key={index} />
+            ))}
+          </>
+        )}
       </div>
-      <div ref={bottomRef} />
       {!!products.length && ( 
         <AtButton
           color={AtButtonColor.SECONDARY} 
