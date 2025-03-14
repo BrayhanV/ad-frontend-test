@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { OrHeader } from "@/components/organisms/OrHeader";
 import { OrFooter } from "@/components/organisms/OrFooter";
+import { OrHeaderIcons } from "@/components/organisms/OrHeader/type";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,11 +17,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const icons: OrHeaderIcons[] = [
+    { icon: "/icons/cart.svg", link: "/cart" },
+  ];
+
   return (
     <html lang="en">
       <body className={`${inter.className} min-h-screen flex flex-col`}>
-        <OrHeader />
-        <main className='flex flex-col px-6 md:px-32'>
+        <OrHeader icons={icons} />
+        <main className='flex flex-1 flex-col px-6 md:px-32'>
           {children}
         </main>
         <OrFooter />

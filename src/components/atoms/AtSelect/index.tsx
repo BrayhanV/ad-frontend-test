@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import SelectArrow from '../../../../public/select-arrow.svg';
 import { AtSelectProps } from './types';
 
 export const AtSelect = ({ id, name, options, value, onChange }: AtSelectProps) => {
@@ -21,7 +20,7 @@ export const AtSelect = ({ id, name, options, value, onChange }: AtSelectProps) 
       </select>
       <div className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
         <Image
-          src={SelectArrow}
+          src={"/icons/select-arrow.svg"}
           alt=""
           width={7.69}
           height={20.02}
