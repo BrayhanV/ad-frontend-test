@@ -1,5 +1,5 @@
 export enum OrHeaderLogoText {
-  GAMER_SHOP = "GamerShop SHOP",
+  GAMER_SHOP = "GamerShop",
 }
 
 export interface OrHeaderIcons {

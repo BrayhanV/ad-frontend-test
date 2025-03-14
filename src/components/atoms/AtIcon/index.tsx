@@ -6,7 +6,7 @@ export const AtIcon = ({ src, alt, width, height, priority }: AtIconProps) => {
     <Image
       src={src}
       alt={alt}
-      width={width}
+      width={width ?? 24}
       height={height ?? 24}
       className="p-0.5 hover:opacity-75 transition-opacity"
       priority={priority}
