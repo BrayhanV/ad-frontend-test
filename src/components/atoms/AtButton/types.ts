@@ -6,5 +6,6 @@ export interface AtButtonProps {
   variant?: AtButtonVariant,
   color: AtButtonColor,
   disabled?: boolean,
+  fit?: boolean,
   onClick?: MouseEventHandler<HTMLButtonElement>,
 }
