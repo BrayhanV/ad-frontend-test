@@ -5,3 +5,7 @@ export enum TmCartTitles {
 export enum TmCartProductLabels {
   ITEMS = "Items",
 }
+
+export enum TmCartButtonLabel {
+  CHECKOUT = "Checkout",
+}

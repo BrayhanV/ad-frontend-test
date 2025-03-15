@@ -7,9 +7,10 @@ import { useCallback, useMemo } from "react"
 import { useCartStore } from "@/stores/cart"
 import { MlCardBasket } from "@/components/molecules/MlCardBasket"
 import { Product } from "@/models/Product"
+import { OrOrderSummaryItemLabel, OrOrderSummaryTotalLabel } from "@/components/organisms/OrOrderSummary/types"
 
 export const TmCart = () => {
-  const { products, removeProduct } = useCartStore(useShallow(state => ({
+  const { products, total, removeProduct } = useCartStore(useShallow(state => ({
     products: state.products,
     total: state.total,
     removeProduct: state.removeProduct
@@ -41,13 +42,20 @@ export const TmCart = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-12 md:gap-20">
-          <div className="flex flex-col gap-0">
-            {productsArray.map(product => (
-              <MlCardBasket key={product.id} product={product} onClickButton={handleRemoveProduct} />
-            ))}
-          </div>
+          {!!productsArray.length && (
+            <div className="flex flex-col gap-0">
+              {productsArray.map(product => (
+                <MlCardBasket key={product.id} product={product} onClickButton={handleRemoveProduct} />
+              ))}
+            </div>
+          )}
 
-          <OrOrderSummary />
+          <OrOrderSummary 
+            itemLabel={productsArray.length === 1 ? OrOrderSummaryItemLabel.ITEM : OrOrderSummaryItemLabel.ITEMS}
+            totalLabel={OrOrderSummaryTotalLabel.TOTAL}
+            products={productsArray} 
+            total={total} 
+          />
         </div>
       </div>
     </>
