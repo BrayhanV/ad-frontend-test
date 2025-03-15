@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function MlLink({ iconProps, href, label }: MlLinkProps) {
   return (
     <Link href={href} className={`flex items-center gap-2`}>
-      {iconProps && (<AtIcon {...iconProps} />)}
+      {iconProps && <AtIcon {...iconProps} />}
       <span className="text-sm tracking-normal">{label}</span>
     </Link>
   );

@@ -1,11 +1,17 @@
-'use client';
-import Image from 'next/image';
-import { AtSelectProps } from './types';
+"use client";
+import Image from "next/image";
+import { AtSelectProps } from "./types";
 
-export const AtSelect = ({ id, name, options, value, onChange }: AtSelectProps) => {
+export const AtSelect = ({
+  id,
+  name,
+  options,
+  value,
+  onChange,
+}: AtSelectProps) => {
   return (
     <div className="relative w-full">
-      <select 
+      <select
         id={id}
         name={name}
         value={value}
@@ -28,5 +34,5 @@ export const AtSelect = ({ id, name, options, value, onChange }: AtSelectProps) 
         />
       </div>
     </div>
-  )
-}
+  );
+};

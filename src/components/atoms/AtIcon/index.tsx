@@ -1,7 +1,14 @@
-import Image from "next/image"
-import { AtIconProps } from "./types"
+import Image from "next/image";
+import { AtIconProps } from "./types";
 
-export const AtIcon = ({ src, alt, width, height, priority, onClick }: AtIconProps) => {
+export const AtIcon = ({
+  src,
+  alt,
+  width,
+  height,
+  priority,
+  onClick,
+}: AtIconProps) => {
   return (
     <Image
       src={src}
@@ -12,5 +19,5 @@ export const AtIcon = ({ src, alt, width, height, priority, onClick }: AtIconPro
       priority={priority}
       onClick={onClick}
     />
-  )
-}
+  );
+};

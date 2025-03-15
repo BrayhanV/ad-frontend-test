@@ -309,7 +309,7 @@ export const allGames: Game[] = [
 ];
 
 export const availableFilters = Array.from(
-  new Set(allGames.map((game) => game.genre))
+  new Set(allGames.map((game) => game.genre)),
 );
 
 export const delay = (ms: number) =>

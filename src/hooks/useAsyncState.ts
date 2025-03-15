@@ -8,11 +8,11 @@ export const useAsyncState = <T, P = void>(
     onSuccess?: (value: T) => void;
     onError?: (error: unknown) => void;
     mergeData?: (prev: T | undefined, next: T) => T;
-  }
-): { 
-  value: T | undefined; 
-  loading: boolean; 
-  error: unknown; 
+  },
+): {
+  value: T | undefined;
+  loading: boolean;
+  error: unknown;
   reset: () => void;
   fetchMore: (params?: P) => void;
 } => {
@@ -28,8 +28,10 @@ export const useAsyncState = <T, P = void>(
       try {
         const result = await promiseCreator(params);
         if (!signal?.aborted) {
-          setValue(prev => 
-            params && options?.mergeData ? options.mergeData(prev, result) : result
+          setValue((prev) =>
+            params && options?.mergeData
+              ? options.mergeData(prev, result)
+              : result,
           );
           options?.onSuccess?.(result);
         }
@@ -37,7 +39,7 @@ export const useAsyncState = <T, P = void>(
         if (!signal?.aborted) {
           setError(err);
           options?.onError?.(err);
-          console.error('useAsyncState: Error while resolving promise', err);
+          console.error("useAsyncState: Error while resolving promise", err);
         }
       } finally {
         if (!signal?.aborted) {
@@ -45,13 +47,10 @@ export const useAsyncState = <T, P = void>(
         }
       }
     },
-    [promiseCreator, options]
+    [promiseCreator, options],
   );
 
-  const fetchMore = useCallback(
-    (params?: P) => perform(params),
-    [perform]
-  );
+  const fetchMore = useCallback((params?: P) => perform(params), [perform]);
 
   const reset = useCallback(() => {
     setValue(options?.initialValue);
