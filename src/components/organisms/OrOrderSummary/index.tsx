@@ -1,5 +1,5 @@
 import { AtSeparator } from "@/components/atoms/AtSeparator";
-import { OrOrderSummaryProps } from "./types";
+import { OrOrderSummaryProps, OrOrderSummaryTitle } from "./types";
 import { AtButton } from "@/components/atoms/AtButton";
 import { AtButtonColor } from "@/components/atoms/AtButton/config";
 import { TmCartButtonLabel } from "@/components/templates/TmCart/types";
@@ -15,7 +15,7 @@ export const OrOrderSummary = ({
       <div className="flex flex-col gap-6 md:gap-8 px-4 md:px-6 py-6 md:py-8 border-[0.5px] border-stroke-primary rounded-lg">
         <div className="flex flex-col gap-3">
           <h2 className="text-primary text-lg font-bold tracking-wide">
-            Order Summary
+            {OrOrderSummaryTitle.ORDER_SUMMARY}
           </h2>
           <p className="text-primary text-base">
             {products.length} {itemLabel}

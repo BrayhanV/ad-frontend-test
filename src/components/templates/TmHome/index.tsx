@@ -9,6 +9,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
 import { useShallow } from "zustand/shallow";
 import { useCartStore } from "@/stores/cart";
+import { TmHomeFilterLabels, TmHomeTitles } from "./types";
 
 export const TmHome = () => {
   const router = useRouter();
@@ -86,12 +87,12 @@ export const TmHome = () => {
     <>
       <div className="flex flex-col min-w-full gap-8 py-6 md:py-12">
         <h1 className="text-primary font-bold text-xl md:text-2xl">
-          TOP SELLERS
+          {TmHomeTitles.TOP_SELLERS}
         </h1>
 
         <div className="flex flex-row gap-6 min-w-full md:min-w-fit md:max-w-fit items-center md:self-end">
           <label htmlFor="genre" className="text-lg font-bold text-primary">
-            Genre
+            {TmHomeFilterLabels.GENRE}
           </label>
           <div className="h-[22px] w-px border-solid border-r border-primary" />
           <AtSelect

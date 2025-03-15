@@ -3,7 +3,7 @@ import { AtButton } from "@/components/atoms/AtButton";
 import { AtButtonColor } from "@/components/atoms/AtButton/config";
 import { MlProductCard } from "@/components/molecules/MlProductCard";
 import { MlProductCardSkeleton } from "@/components/molecules/MlProductCard/skeleton";
-import { OrProductListingProps } from "./types";
+import { OrProductListingButtonText, OrProductListingProps } from "./types";
 import { useCallback, useRef } from "react";
 import { useCartStore } from "@/stores/cart";
 
@@ -53,7 +53,7 @@ export const OrProductListing = ({
           disabled={!onLoadMore || loading}
           onClick={handleLoadMore}
         >
-          SEE MORE
+          {OrProductListingButtonText.SEE_MORE}
         </AtButton>
       )}
     </section>

@@ -1,5 +1,9 @@
 import { Product } from "@/models/Product";
 
+export enum OrOrderSummaryTitle {
+  ORDER_SUMMARY = "Order Summary",
+}
+
 export enum OrOrderSummaryItemLabel {
   ITEMS = "items",
   ITEM = "item",
