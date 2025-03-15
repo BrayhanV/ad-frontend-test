@@ -20,11 +20,11 @@ export const MlCardBasket = ({ product, onClickButton }: MlCardBasketProps) => {
             </p>
             <div className="flex flex-col gap-2">
               <h2 className="text-primary text-base font-bold tracking-wide">{product.name}</h2>
-              <p className="text-neutral-500 text-sm tracking-normal">{product.description}aaa</p>
+              <p className="text-neutral-500 text-sm tracking-normal">{product.description}</p>
             </div>
 
             <div className="h-10 content-end self-end items-end">
-              <p className="w-fit text-base font-bold tracking-wide">
+              <p className="w-fit text-primary text-base font-bold tracking-wide">
                 ${product.price}
               </p>
             </div>

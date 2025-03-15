@@ -23,10 +23,10 @@ export const OrProductListing = ({ products, loading, onLoadMore, onAddProductTo
       <div className="flex flex-col md:flex-row md:flex-wrap gap-6 md:gap-12">
         {products.map((product) => (
           <MlProductCard key={product.id} product={product} isProductInCart={!!games.get(product.id)} onClickButton={onAddProductToCart} />
-        )) }
+        ))}
         {loading && (
           <>
-            <div ref={bottomRef} />
+            <div className="hidden" ref={bottomRef} />
             {[...Array(3)].map((_, index) => (
               <MlProductCardSkeleton key={index} />
             ))}
@@ -35,6 +35,7 @@ export const OrProductListing = ({ products, loading, onLoadMore, onAddProductTo
       </div>
       {!!products.length && ( 
         <AtButton
+          fit={true}
           color={AtButtonColor.SECONDARY} 
           disabled={!onLoadMore || loading} 
           onClick={handleLoadMore}
