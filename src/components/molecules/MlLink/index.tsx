@@ -1,4 +1,4 @@
-import { AtIcon } from "@/components/atoms/AtIcon";
+import { AtIcon } from "@/components/atoms/at-icon/at-icon";
 import { MlLinkProps } from "./types";
 import Link from "next/link";
 

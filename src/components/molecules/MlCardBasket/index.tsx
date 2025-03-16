@@ -1,4 +1,4 @@
-import { AtIcon } from "@/components/atoms/AtIcon";
+import { AtIcon } from "@/components/atoms/at-icon/at-icon";
 import { MlProductImage } from "../MlProductImage";
 import { MlProductImageVariant } from "../MlProductImage/config";
 import { MlCardBasketProps } from "./types";

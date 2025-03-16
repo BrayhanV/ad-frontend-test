@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AtIconProps } from "./types";
+import { AtIconProps } from "./at-icon.types";
 
 export const AtIcon = ({
   src,
