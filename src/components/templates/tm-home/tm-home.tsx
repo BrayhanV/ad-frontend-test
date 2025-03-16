@@ -2,14 +2,14 @@
 import { Product } from "@/models/Product";
 import { AtSelect } from "@/components/atoms/at-select/at-select";
 import { OrProductListing } from "@/components/organisms/or-product-listing";
-import { useAsyncState } from "@/hooks/useAsyncState";
+import { useAsyncState } from "@/hooks";
 import { DEFAULT_GENRE, getGames } from "@/services/games";
 import { GetGamesParams, GetGamesResponse } from "@/services/games/types";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
 import { useShallow } from "zustand/shallow";
 import { useCartStore } from "@/stores/cart";
-import { TmHomeFilterLabels, TmHomeTitles } from "./types";
+import { TmHomeFilterLabels, TmHomeTitles } from "./tm-home.types";
 
 export const TmHome = () => {
   const router = useRouter();

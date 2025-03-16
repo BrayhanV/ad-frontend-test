@@ -1,6 +1,6 @@
 import { MlProductCardProps } from "../ml-product-card";
 import { MlProductImage } from "../ml-product-image/ml-product-image";
-import { MlProductImageVariant } from "../ml-product-image/ml-product-image.config";
+import { MlProductImageVariant } from "../ml-product-image/ml-product-image.classes";
 import { MlProductImageNewLabel } from "../ml-product-image/ml-product-image.types";
 import {
   AtButton,

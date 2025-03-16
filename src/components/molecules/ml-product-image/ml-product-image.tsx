@@ -2,7 +2,7 @@ import { MlProductImageProps } from "./ml-product-image.types";
 import {
   MlProductImageClasses,
   MlProductImageVariant,
-} from "./ml-product-image.config";
+} from "./ml-product-image.classes";
 
 export const MlProductImage = ({
   src,
