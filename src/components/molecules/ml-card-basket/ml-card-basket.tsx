@@ -5,8 +5,8 @@ import { MlProductImage, MlProductImageVariant } from "../ml-product-image";
 export const MlCardBasket = ({ product, onClickButton }: MlCardBasketProps) => {
   return (
     <article className="flex flex-col px-4 py-5 gap-4 border-b-[0.5px] last:border-0 border-stroke-secondary">
-      <div className="flex flex-row items-start gap-3 md:gap-6">
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+      <div className="flex flex-row items-start gap-4 md:gap-6">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 w-full">
           <MlProductImage
             src={product.image}
             alt={product.name}
