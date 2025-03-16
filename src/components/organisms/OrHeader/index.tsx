@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { OrHeaderLogoText, OrHeaderProps } from "./type";
-import MlLink from "@/components/molecules/MlLink";
+import { MlLink } from "@/components/molecules/ml-link/ml-link";
 
 export const OrHeader = ({ icons }: OrHeaderProps) => {
   return (

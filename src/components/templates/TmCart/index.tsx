@@ -1,5 +1,5 @@
 "use client";
-import MlLink from "@/components/molecules/MlLink";
+import { MlLink } from "@/components/molecules/ml-link/ml-link";
 import { OrOrderSummary } from "@/components/organisms/OrOrderSummary";
 import { TmCartProductLabels, TmCartTitles } from "./types";
 import { useShallow } from "zustand/shallow";
