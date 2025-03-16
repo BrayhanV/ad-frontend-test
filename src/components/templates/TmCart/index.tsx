@@ -5,7 +5,7 @@ import { TmCartProductLabels, TmCartTitles } from "./types";
 import { useShallow } from "zustand/shallow";
 import { useCallback, useMemo } from "react";
 import { useCartStore } from "@/stores/cart";
-import { MlCardBasket } from "@/components/molecules/MlCardBasket";
+import { MlCardBasket } from "@/components/molecules/ml-card-basket";
 import { Product } from "@/models/Product";
 import {
   OrOrderSummaryItemLabel,
