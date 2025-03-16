@@ -5,3 +5,7 @@ export enum TmHomeTitles {
 export enum TmHomeFilterLabels {
   GENRE = "Genre",
 }
+
+export interface TmHomeProps {
+  searchParams: { [key: string]: string | string[] | undefined };
+}

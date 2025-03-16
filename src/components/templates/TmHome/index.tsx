@@ -85,7 +85,7 @@ export const TmHome = () => {
 
   return (
     <>
-      <div className="flex flex-col min-w-full gap-8 py-6 md:py-12">
+      <section className="flex flex-col min-w-full gap-8 py-6 md:py-12">
         <h1 className="text-primary font-bold text-xl md:text-2xl">
           {TmHomeTitles.TOP_SELLERS}
         </h1>
@@ -94,7 +94,7 @@ export const TmHome = () => {
           <label htmlFor="genre" className="text-lg font-bold text-primary">
             {TmHomeFilterLabels.GENRE}
           </label>
-          <div className="h-[22px] w-px border-solid border-r border-primary" />
+          <span className="h-[22px] w-px border-solid border-r border-primary" />
           <AtSelect
             id="genre"
             name="genre"
@@ -103,7 +103,7 @@ export const TmHome = () => {
             onChange={handleGenreChange}
           />
         </div>
-      </div>
+      </section>
 
       <OrProductListing
         loading={loading}

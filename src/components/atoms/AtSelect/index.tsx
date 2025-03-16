@@ -24,7 +24,7 @@ export const AtSelect = ({
           </option>
         ))}
       </select>
-      <div className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
+      <span className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
         <Image
           src={"/icons/select-arrow.svg"}
           alt=""
@@ -32,7 +32,7 @@ export const AtSelect = ({
           height={20.02}
           className="opacity-50"
         />
-      </div>
+      </span>
     </div>
   );
 };

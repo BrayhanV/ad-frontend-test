@@ -11,7 +11,7 @@ export const OrOrderSummary = ({
   totalLabel,
 }: OrOrderSummaryProps) => {
   return (
-    <div className="flex flex-col gap-8 md:gap-10 w-[522px]">
+    <section className="flex flex-col gap-8 md:gap-10 w-[522px]">
       <div className="flex flex-col gap-6 md:gap-8 px-4 md:px-6 py-6 md:py-8 border-[0.5px] border-stroke-primary rounded-lg">
         <div className="flex flex-col gap-3">
           <h2 className="text-primary text-lg font-bold tracking-wide">
@@ -49,6 +49,6 @@ export const OrOrderSummary = ({
       <AtButton color={AtButtonColor.SECONDARY}>
         {TmCartButtonLabel.CHECKOUT}
       </AtButton>
-    </div>
+    </section>
   );
 };

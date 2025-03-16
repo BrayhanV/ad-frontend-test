@@ -45,27 +45,28 @@ export const TmCart = () => {
           label="Back to Catalog"
         />
       </div>
-      <div className="flex flex-col py-8 md:py-12 gap-8 md:gap-12">
-        <div className="flex flex-col gap-3">
+      <section className="flex flex-col py-8 md:py-12 gap-8 md:gap-12">
+        <section className="flex flex-col gap-3">
           <h2 className="text-primary text-xl md:text-2xl font-bold tracking-wide">
             {TmCartTitles.YOUR_CART}
           </h2>
           <h3 className="text-primary text-lg md:text-xl">
             {productsArray.length} {TmCartProductLabels.ITEMS}
           </h3>
-        </div>
+        </section>
 
-        <div className="flex flex-col md:flex-row gap-12 md:gap-20">
+        <section className="flex flex-col md:flex-row gap-12 md:gap-20">
           {!!productsArray.length && (
-            <div className="flex flex-col gap-0">
+            <ul className="flex flex-col gap-0">
               {productsArray.map((product) => (
-                <MlCardBasket
-                  key={product.id}
-                  product={product}
-                  onClickButton={handleRemoveProduct}
-                />
+                <li key={product.id}>
+                  <MlCardBasket
+                    product={product}
+                    onClickButton={handleRemoveProduct}
+                  />
+                </li>
               ))}
-            </div>
+            </ul>
           )}
 
           <OrOrderSummary
@@ -78,8 +79,8 @@ export const TmCart = () => {
             products={productsArray}
             total={total}
           />
-        </div>
-      </div>
+        </section>
+      </section>
     </>
   );
 };

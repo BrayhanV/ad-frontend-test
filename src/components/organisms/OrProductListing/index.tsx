@@ -28,24 +28,29 @@ export const OrProductListing = ({
 
   return (
     <section className="flex flex-col py-8 md:py-12 gap-12">
-      <div className="flex flex-col md:flex-row md:flex-wrap gap-6 md:gap-12">
+      <ul className="flex flex-col md:flex-row md:flex-wrap gap-6 md:gap-12">
         {products.map((product) => (
-          <MlProductCard
-            key={product.id}
-            product={product}
-            isProductInCart={!!games.get(product.id)}
-            onClickButton={onAddProductToCart}
-          />
+          <li key={product.id}>
+            <MlProductCard
+              product={product}
+              isProductInCart={!!games.get(product.id)}
+              onClickButton={onAddProductToCart}
+            />
+          </li>
         ))}
         {loading && (
           <>
-            <div className="hidden" ref={bottomRef} />
+            <li>
+              <div ref={bottomRef} />
+            </li>
             {[...Array(3)].map((_, index) => (
-              <MlProductCardSkeleton key={index} />
+              <li key={index}>
+                <MlProductCardSkeleton />
+              </li>
             ))}
           </>
         )}
-      </div>
+      </ul>
       {!!products.length && (
         <AtButton
           fit={true}
