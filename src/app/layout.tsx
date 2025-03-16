@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { OrHeader } from "@/components/organisms/OrHeader";
 import { OrFooter } from "@/components/organisms/or-footer";
-import { OrHeaderIcons } from "@/components/organisms/OrHeader/type";
+import { OrHeader, OrHeaderIcons } from "@/components/organisms/or-header";
 
 const inter = Inter({ subsets: ["latin"] });
 
