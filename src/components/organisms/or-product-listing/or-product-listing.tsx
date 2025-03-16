@@ -3,7 +3,10 @@ import {
   MlProductCard,
   MlProductCardSkeleton,
 } from "@/components/molecules/ml-product-card";
-import { OrProductListingButtonText, OrProductListingProps } from "./types";
+import {
+  OrProductListingButtonText,
+  OrProductListingProps,
+} from "./or-product-listing.types";
 import { useCallback, useRef } from "react";
 import { useCartStore } from "@/stores/cart";
 import { AtButton, AtButtonColor } from "@/components/atoms/at-button";
