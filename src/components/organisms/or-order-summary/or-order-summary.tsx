@@ -3,7 +3,7 @@ import {
   OrOrderSummaryProps,
   OrOrderSummaryTitle,
 } from "./or-order-summary.types";
-import { TmCartButtonLabel } from "@/components/templates/TmCart/types";
+import { TmCartButtonLabel } from "@/components/templates/tm-cart/tm-cart.types";
 import { AtButton, AtButtonColor } from "@/components/atoms/at-button";
 
 export const OrOrderSummary = ({

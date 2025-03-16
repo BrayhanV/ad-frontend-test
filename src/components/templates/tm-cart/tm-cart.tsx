@@ -1,6 +1,6 @@
 "use client";
 import { MlLink } from "@/components/molecules/ml-link/ml-link";
-import { TmCartProductLabels, TmCartTitles } from "./types";
+import { TmCartProductLabels, TmCartTitles } from "./tm-cart.types";
 import { useShallow } from "zustand/shallow";
 import { useCallback, useMemo } from "react";
 import { useCartStore } from "@/stores/cart";
