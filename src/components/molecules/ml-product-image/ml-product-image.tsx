@@ -1,4 +1,4 @@
-import { MlProductImageProps } from "./ml-product-image.type";
+import { MlProductImageProps } from "./ml-product-image.types";
 import {
   MlProductImageClasses,
   MlProductImageVariant,

@@ -1,6 +1,5 @@
 "use client";
 import { MlLink } from "@/components/molecules/ml-link/ml-link";
-import { OrOrderSummary } from "@/components/organisms/OrOrderSummary";
 import { TmCartProductLabels, TmCartTitles } from "./types";
 import { useShallow } from "zustand/shallow";
 import { useCallback, useMemo } from "react";
@@ -8,9 +7,10 @@ import { useCartStore } from "@/stores/cart";
 import { MlCardBasket } from "@/components/molecules/ml-card-basket";
 import { Product } from "@/models/Product";
 import {
+  OrOrderSummary,
   OrOrderSummaryItemLabel,
   OrOrderSummaryTotalLabel,
-} from "@/components/organisms/OrOrderSummary/types";
+} from "@/components/organisms/or-order-summary";
 
 export const TmCart = () => {
   const { products, total, removeProduct } = useCartStore(

@@ -1,5 +1,8 @@
 import { AtSeparator } from "@/components/atoms/at-separator/at-separator";
-import { OrOrderSummaryProps, OrOrderSummaryTitle } from "./types";
+import {
+  OrOrderSummaryProps,
+  OrOrderSummaryTitle,
+} from "./or-order-summary.types";
 import { TmCartButtonLabel } from "@/components/templates/TmCart/types";
 import { AtButton, AtButtonColor } from "@/components/atoms/at-button";
 
