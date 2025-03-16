@@ -1,6 +1,6 @@
 "use client";
 import { Product } from "@/models/Product";
-import { AtSelect } from "@/components/atoms/AtSelect";
+import { AtSelect } from "@/components/atoms/at-select/at-select";
 import { OrProductListing } from "@/components/organisms/OrProductListing";
 import { useAsyncState } from "@/hooks/useAsyncState";
 import { DEFAULT_GENRE, getGames } from "@/services/games";

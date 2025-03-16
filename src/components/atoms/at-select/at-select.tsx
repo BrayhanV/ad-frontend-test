@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { AtSelectProps } from "./types";
+import { AtSelectProps } from "./at-select.types";
 
 export const AtSelect = ({
   id,
