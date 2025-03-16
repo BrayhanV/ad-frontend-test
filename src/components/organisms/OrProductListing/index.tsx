@@ -1,6 +1,6 @@
 "use client";
-import { MlProductCard } from "@/components/molecules/MlProductCard";
-import { MlProductCardSkeleton } from "@/components/molecules/MlProductCard/skeleton";
+import { MlProductCard } from "@/components/molecules/ml-product-card";
+import { MlProductCardSkeleton } from "@/components/molecules/ml-product-card";
 import { OrProductListingButtonText, OrProductListingProps } from "./types";
 import { useCallback, useRef } from "react";
 import { useCartStore } from "@/stores/cart";

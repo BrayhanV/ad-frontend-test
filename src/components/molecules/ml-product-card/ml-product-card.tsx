@@ -1,4 +1,4 @@
-import { MlProductCardProps } from "./types";
+import { MlProductCardProps } from "./ml-product-card.types";
 import { MlProductImage } from "../MlProductImage";
 import { MlProductImageVariant } from "../MlProductImage/config";
 import { MlProductImageNewLabel } from "../MlProductImage/type";
