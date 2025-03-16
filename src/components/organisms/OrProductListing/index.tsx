@@ -1,11 +1,10 @@
 "use client";
-import { AtButton } from "@/components/atoms/AtButton";
-import { AtButtonColor } from "@/components/atoms/AtButton/config";
 import { MlProductCard } from "@/components/molecules/MlProductCard";
 import { MlProductCardSkeleton } from "@/components/molecules/MlProductCard/skeleton";
 import { OrProductListingButtonText, OrProductListingProps } from "./types";
 import { useCallback, useRef } from "react";
 import { useCartStore } from "@/stores/cart";
+import { AtButton, AtButtonColor } from "@/components/atoms/at-button";
 
 export const OrProductListing = ({
   products,

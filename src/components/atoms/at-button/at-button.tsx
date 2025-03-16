@@ -1,6 +1,6 @@
-import { AtButtonClasses } from "@/components/atoms/AtButton/config";
 import React from "react";
-import { AtButtonProps } from "./types";
+import { AtButtonProps } from "./at-button.types";
+import { AtButtonClasses } from "./at-button.classes";
 
 export const AtButton = ({
   variant,

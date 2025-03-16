@@ -1,12 +1,12 @@
-import { AtButton } from "../../atoms/AtButton";
-import {
-  AtButtonColor,
-  AtButtonVariant,
-} from "@/components/atoms/AtButton/config";
 import { MlProductCardProps } from "./types";
 import { MlProductImage } from "../MlProductImage";
 import { MlProductImageVariant } from "../MlProductImage/config";
 import { MlProductImageNewLabel } from "../MlProductImage/type";
+import {
+  AtButton,
+  AtButtonColor,
+  AtButtonVariant,
+} from "@/components/atoms/at-button";
 
 export const MlProductCard = ({
   product,

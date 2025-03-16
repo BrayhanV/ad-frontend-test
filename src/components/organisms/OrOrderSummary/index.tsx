@@ -1,8 +1,7 @@
 import { AtSeparator } from "@/components/atoms/AtSeparator";
 import { OrOrderSummaryProps, OrOrderSummaryTitle } from "./types";
-import { AtButton } from "@/components/atoms/AtButton";
-import { AtButtonColor } from "@/components/atoms/AtButton/config";
 import { TmCartButtonLabel } from "@/components/templates/TmCart/types";
+import { AtButton, AtButtonColor } from "@/components/atoms/at-button";
 
 export const OrOrderSummary = ({
   total,
