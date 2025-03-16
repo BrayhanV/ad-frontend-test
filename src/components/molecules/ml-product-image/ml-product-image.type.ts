@@ -1,4 +1,4 @@
-import { MlProductImageVariant } from "./config";
+import { MlProductImageVariant } from "./ml-product-image.config";
 
 export enum MlProductImageNewLabel {
   NEW = "New",

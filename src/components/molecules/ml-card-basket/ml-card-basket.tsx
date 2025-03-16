@@ -1,7 +1,6 @@
 import { AtIcon } from "@/components/atoms/at-icon/at-icon";
-import { MlProductImage } from "../MlProductImage";
-import { MlProductImageVariant } from "../MlProductImage/config";
 import { MlCardBasketProps } from "./ml-card-basket.types";
+import { MlProductImage, MlProductImageVariant } from "../ml-product-image";
 
 export const MlCardBasket = ({ product, onClickButton }: MlCardBasketProps) => {
   return (

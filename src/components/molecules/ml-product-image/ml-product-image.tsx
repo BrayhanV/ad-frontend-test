@@ -1,5 +1,8 @@
-import { MlProductImageProps } from "./type";
-import { MlProductImageClasses, MlProductImageVariant } from "./config";
+import { MlProductImageProps } from "./ml-product-image.type";
+import {
+  MlProductImageClasses,
+  MlProductImageVariant,
+} from "./ml-product-image.config";
 
 export const MlProductImage = ({
   src,
