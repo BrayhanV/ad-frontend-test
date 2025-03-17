@@ -89,8 +89,8 @@ export const TmHome = () => {
 
   return (
     <>
-      <section className="flex flex-col min-w-full gap-8 py-6 md:py-12">
-        <h1 className="text-primary font-bold text-xl md:text-2xl">
+      <section className="flex flex-col px-6 md:px-32 min-w-full gap-8 py-8 md:py-12 border-b border-solid border-stroke-tertiary">
+        <h1 className="text-primary font-bold text-xl md:text-2xl uppercase md:normal-case">
           {TmHomeTitles.TOP_SELLERS}
         </h1>
 

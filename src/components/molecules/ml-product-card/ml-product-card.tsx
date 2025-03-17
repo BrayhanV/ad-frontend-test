@@ -35,7 +35,9 @@ export const MlProductCard = ({
           <h2 className="text-primary text-base font-bold tracking-wide">
             {product.name}
           </h2>
-          <p className="text-lg font-bold tracking-wide">${product.price}</p>
+          <p className="text-primary text-lg font-bold tracking-wide">
+            ${product.price}
+          </p>
         </div>
       </div>
       <AtButton

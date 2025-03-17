@@ -16,7 +16,7 @@ export const AtSelect = ({
         name={name}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full md:min-w-[205px] bg-transparent border-none appearance-none p-4 focus:outline-none text-primary"
+        className="w-full md:min-w-[205px] bg-transparent border-none appearance-none p-4 focus:outline-none text-primary cursor-pointer"
       >
         {options.map((option) => (
           <option key={option} value={option}>
@@ -28,8 +28,8 @@ export const AtSelect = ({
         <Image
           src={"/icons/select-arrow.svg"}
           alt="arrow"
-          width={7.69}
-          height={20.02}
+          width={13.37}
+          height={7.69}
           className="opacity-50"
         />
       </span>

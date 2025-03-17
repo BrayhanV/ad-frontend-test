@@ -4,32 +4,33 @@
 
 @layer base {
   :root {
-    --primary: #3B3B3B;
+    --primary: #3b3b3b;
     --secondary: #585660;
     /* Colors */
     --neutral-500: #737373;
     --neutral-700: #404040;
-    --gray-medium: #3B3B3B;
+    --gray-medium: #3b3b3b;
 
     /* Text */
-    --text-primary: #3B3B3B;
+    --text-primary: #3b3b3b;
     --text-secondary: #585660;
     --text-tertiary: #666175;
-    --background: #3B3B3B;
+    --background: #3b3b3b;
 
     /* Surfaces */
     --surface-primary: #1f1f1f;
-    --surface-secondary: #EEEEEE;
+    --surface-secondary: #eeeeee;
 
     /* Stroke */
-    --stroke-primary: #8F8F8F;
-    --stroke-secondary: #EEEEEE;
+    --stroke-primary: #8f8f8f;
+    --stroke-secondary: #eeeeee;
     --stroke-active: #585660;
+    --stroke-tertiary: #efedf3;
 
     select option {
       @apply text-primary;
     }
-    
+
     select:focus option:checked {
       @apply bg-surface-secondary;
     }

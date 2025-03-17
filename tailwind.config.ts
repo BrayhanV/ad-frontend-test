@@ -22,8 +22,8 @@ const config: Config = {
         sm: ["16px", "16px"],
         base: ["18px", "20px"],
         lg: ["20px", "24px"],
-        xl: ["24px", "28px"], 
-        "2xl": ["36px", "40px"]
+        xl: ["24px", "28px"],
+        "2xl": ["36px", "40px"],
       },
       colors: {
         primary: "var(--primary)",
@@ -35,11 +35,12 @@ const config: Config = {
         surface: {
           primary: "var(--surface-primary)",
           secondary: "var(--surface-secondary)",
-        }
+        },
       },
       stroke: {
         primary: "var(--stroke-primary)",
         secondary: "var(--stroke-secondary)",
+        tertiary: "var(--stroke-tertiary)",
         active: "var(--stroke-active)",
       },
     },

@@ -35,7 +35,7 @@ export const TmCart = () => {
 
   return (
     <>
-      <div className="py-4 md:py-6">
+      <div className="py-4 md:py-6 px-6 md:px-32">
         <MlLink
           href="/"
           iconProps={{
@@ -45,7 +45,7 @@ export const TmCart = () => {
           label="Back to Catalog"
         />
       </div>
-      <section className="flex flex-col py-8 md:py-12 gap-8 md:gap-12">
+      <section className="flex flex-col px-6 md:px-32 py-8 md:py-12 gap-8 md:gap-12">
         <section className="flex flex-col gap-3">
           <h2 className="text-primary text-xl md:text-2xl font-bold tracking-wide">
             {TmCartTitles.YOUR_CART}

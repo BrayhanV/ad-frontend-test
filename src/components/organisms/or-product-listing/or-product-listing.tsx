@@ -29,7 +29,7 @@ export const OrProductListing = ({
   }, [onLoadMore]);
 
   return (
-    <section className="flex flex-col py-8 md:py-12 gap-12">
+    <section className="flex flex-col px-6 md:px-32 py-8 md:py-12 gap-12">
       <ul className="flex flex-col md:flex-row md:flex-wrap gap-6 md:gap-12">
         {products.map((product) => (
           <li key={product.id}>
