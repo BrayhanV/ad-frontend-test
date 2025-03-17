@@ -1,6 +1,9 @@
 export const MlProductCardSkeleton = () => {
   return (
-    <article className="w-full h-fit md:w-[380px] flex flex-col rounded-2xl overflow-hidden p-6 gap-5 border-stroke-secondary border-[0.5px] bg-gray-200">
+    <article
+      data-testid="skeleton"
+      className="w-full h-fit md:w-[380px] flex flex-col rounded-2xl overflow-hidden p-6 gap-5 border-stroke-secondary border-[0.5px] bg-gray-200"
+    >
       <div
         className="w-full h-[240px] rounded-t-2xl bg-gray-300"
         data-testid="image-skeleton"
