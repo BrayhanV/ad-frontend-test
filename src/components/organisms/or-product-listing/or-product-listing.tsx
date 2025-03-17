@@ -1,5 +1,5 @@
 "use client";
-import { MlProductCard } from "@/components/molecules/ml-product-card";
+import { OrProductCard } from "@/components/organisms/or-product-card";
 import {
   OrProductListingButtonText,
   OrProductListingProps,
@@ -33,7 +33,7 @@ export const OrProductListing = ({
       <ul className="flex flex-col md:flex-row md:flex-wrap gap-6 md:gap-12">
         {products.map((product) => (
           <li key={product.id}>
-            <MlProductCard
+            <OrProductCard
               product={product}
               isProductInCart={!!games.get(product.id)}
               onClickButton={onAddProductToCart}

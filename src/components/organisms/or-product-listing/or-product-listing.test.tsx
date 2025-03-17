@@ -3,8 +3,8 @@ import { Product } from "@/models/Product";
 import { useCartStore } from "@/stores/cart";
 import { OrProductListing } from "./or-product-listing";
 
-jest.mock("@/components/molecules/ml-product-card", () => ({
-  MlProductCard: ({ product }: { product: Product }) => (
+jest.mock("@/components/organisms/or-product-card", () => ({
+  OrProductCard: ({ product }: { product: Product }) => (
     <div data-testid="product-card">{product.name}</div>
   ),
   MlProductCardSkeleton: () => <div data-testid="skeleton">Skeleton</div>,

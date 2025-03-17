@@ -2,22 +2,22 @@ import {
   MlProductImage,
   MlProductImageNewLabel,
   MlProductImageVariant,
-} from "../ml-product-image";
+} from "../../molecules/ml-product-image";
 import {
-  MlProductCardButtonText,
-  MlProductCardProps,
-} from "./ml-product-card.types";
+  OrProductCardButtonText,
+  OrProductCardProps,
+} from "./or-product-card.types";
 import {
   AtButton,
   AtButtonColor,
   AtButtonVariant,
 } from "@/components/atoms/at-button";
 
-export const MlProductCard = ({
+export const OrProductCard = ({
   product,
   isProductInCart,
   onClickButton,
-}: MlProductCardProps) => {
+}: OrProductCardProps) => {
   return (
     <article className="w-full h-fit md:w-[380px] flex flex-col rounded-2xl overflow-hidden p-6 gap-5 border-stroke-secondary border-[0.5px]">
       <MlProductImage
@@ -32,7 +32,7 @@ export const MlProductCard = ({
           {product.label.toUpperCase()}
         </p>
         <div className="flex flex-row justify-between items-start gap-2">
-          <h2 className="text-primary text-base font-bold tracking-wide">
+          <h2 className="text-primary text-base font-bold tracking-wide line-clamp-2 min-h-10">
             {product.name}
           </h2>
           <p className="text-primary text-lg font-bold tracking-wide">
@@ -46,8 +46,8 @@ export const MlProductCard = ({
         onClick={() => onClickButton(product)}
       >
         {isProductInCart
-          ? MlProductCardButtonText.REMOVE
-          : MlProductCardButtonText.ADD_TO_CART}
+          ? OrProductCardButtonText.REMOVE
+          : OrProductCardButtonText.ADD_TO_CART}
       </AtButton>
     </article>
   );

@@ -1,9 +1,9 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import type { MlProductCardProps } from "../ml-product-card/ml-product-card.types";
+import type { OrProductCardProps } from "./or-product-card.types";
 import { Product } from "@/models/Product";
-import { MlProductCard } from "../ml-product-card/ml-product-card";
+import { OrProductCard } from "./or-product-card";
 
-jest.mock("../ml-product-image", () => ({
+jest.mock("@/components/molecules/ml-product-image", () => ({
   MlProductImage: ({ src, alt }: { src: string; alt: string }) => (
     <img src={src} alt={alt} data-testid="product-image" />
   ),
@@ -27,7 +27,7 @@ jest.mock("@/components/atoms/at-button", () => ({
   AtButtonVariant: { DESKTOP: "DESKTOP" },
 }));
 
-describe("MlProductCard Component", () => {
+describe("OrProductCard Component", () => {
   const mockProduct: Product = {
     id: "1",
     name: "Test Product",
@@ -38,7 +38,7 @@ describe("MlProductCard Component", () => {
     isNew: true,
   };
 
-  const defaultProps: MlProductCardProps = {
+  const defaultProps: OrProductCardProps = {
     product: mockProduct,
     isProductInCart: false,
     onClickButton: jest.fn(),
@@ -49,7 +49,7 @@ describe("MlProductCard Component", () => {
   });
 
   it("renders all product information correctly", () => {
-    render(<MlProductCard {...defaultProps} />);
+    render(<OrProductCard {...defaultProps} />);
 
     expect(
       screen.getByText(mockProduct.label.toUpperCase()),
@@ -64,20 +64,20 @@ describe("MlProductCard Component", () => {
 
   describe("Button behavior", () => {
     it('shows "ADD TO CART" when product is not in cart', () => {
-      render(<MlProductCard {...defaultProps} />);
+      render(<OrProductCard {...defaultProps} />);
       expect(screen.getByTestId("product-button")).toHaveTextContent(
         "ADD TO CART",
       );
     });
 
     it('shows "REMOVE" when product is in cart', () => {
-      render(<MlProductCard {...defaultProps} isProductInCart={true} />);
+      render(<OrProductCard {...defaultProps} isProductInCart={true} />);
       expect(screen.getByTestId("product-button")).toHaveTextContent("REMOVE");
     });
   });
 
   it("triggers onClickButton with product when clicked", () => {
-    render(<MlProductCard {...defaultProps} />);
+    render(<OrProductCard {...defaultProps} />);
 
     const button = screen.getByTestId("product-button");
     fireEvent.click(button);
@@ -87,7 +87,7 @@ describe("MlProductCard Component", () => {
   });
 
   it("has correct layout structure", () => {
-    const { container } = render(<MlProductCard {...defaultProps} />);
+    const { container } = render(<OrProductCard {...defaultProps} />);
 
     const article = screen.getByRole("article");
     expect(article).toHaveClass("w-full");
@@ -97,7 +97,7 @@ describe("MlProductCard Component", () => {
   });
 
   it("has proper accessibility attributes", () => {
-    render(<MlProductCard {...defaultProps} />);
+    render(<OrProductCard {...defaultProps} />);
 
     const article = screen.getByRole("article");
     const button = screen.getByRole("button");

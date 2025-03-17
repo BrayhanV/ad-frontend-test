@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { MlProductCardSkeleton } from "../ml-product-card-skeleton/ml-product-card.skeleton";
+import { MlProductCardSkeleton } from "./ml-product-card.skeleton";
 
 describe("MlProductCardSkeleton", () => {
   it("renders the skeleton structure", () => {

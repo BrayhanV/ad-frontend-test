@@ -1,11 +1,11 @@
 import { Product } from "@/models/Product";
 
-export enum MlProductCardButtonText {
+export enum OrProductCardButtonText {
   ADD_TO_CART = "ADD TO CART",
   REMOVE = "REMOVE",
 }
 
-export interface MlProductCardProps {
+export interface OrProductCardProps {
   product: Product;
   isProductInCart: boolean;
   onClickButton: (product: Product) => void;
