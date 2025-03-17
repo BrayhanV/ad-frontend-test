@@ -16,16 +16,23 @@ jest.mock("@/components/atoms/at-separator/at-separator", () => ({
 jest.mock("@/components/atoms/at-button", () => ({
   AtButton: ({
     color,
+    variant,
     children,
   }: {
     color: string;
+    variant?: string;
     children: React.ReactNode;
   }) => (
-    <button data-testid="checkout-button" data-color={color}>
+    <button
+      data-testid="checkout-button"
+      data-color={color}
+      data-variant={variant}
+    >
       {children}
     </button>
   ),
   AtButtonColor: { SECONDARY: "secondary" },
+  AtButtonVariant: { DESKTOP: "desktop" },
 }));
 
 describe("OrOrderSummary Component", () => {
