@@ -10,7 +10,7 @@ export const AtSelect = ({
   onChange,
 }: AtSelectProps) => {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full" data-testid="select-wrapper">
       <select
         id={id}
         name={name}
@@ -27,7 +27,7 @@ export const AtSelect = ({
       <span className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
         <Image
           src={"/icons/select-arrow.svg"}
-          alt=""
+          alt="arrow"
           width={7.69}
           height={20.02}
           className="opacity-50"

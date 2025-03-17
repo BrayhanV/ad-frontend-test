@@ -6,7 +6,7 @@ export const MlLink = ({ iconProps, href, label }: MlLinkProps) => {
   return (
     <Link href={href} className={`flex items-center gap-2`}>
       {iconProps && <AtIcon {...iconProps} />}
-      <span className="text-sm tracking-normal">{label}</span>
+      {!!label && <span className="text-sm tracking-normal">{label}</span>}
     </Link>
   );
 };

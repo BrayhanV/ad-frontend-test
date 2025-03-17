@@ -6,7 +6,19 @@ import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default [
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
-  {ignores: ["**/node_modules/*", "**/dist/*", "**/.next/*", "postcss.config.js"]},
+  {
+    ignores: [
+      "**/node_modules/*",
+      "**/dist/*",
+      "**/.next/*",
+      "postcss.config.js",
+      "jest.config.js",
+      "jest.setup.js",
+      "jest.resolver.js",
+      "next.config.js",
+      "tailwind.config.js",
+    ],
+  },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
@@ -16,23 +28,23 @@ export default [
     files: ["**/*.{jsx,tsx}"],
     rules: {
       "react/jsx-uses-react": "off",
-      "react/react-in-jsx-scope": "off"
-    }
+      "react/react-in-jsx-scope": "off",
+    },
   },
   {
     settings: {
       react: {
-        version: "detect"
-      }
+        version: "detect",
+      },
     },
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
-          jsx: true
+          jsx: true,
         },
         sourceType: "module",
-        project: "./tsconfig.json"
-      }
-    }
-  }
+        project: "./tsconfig.json",
+      },
+    },
+  },
 ];

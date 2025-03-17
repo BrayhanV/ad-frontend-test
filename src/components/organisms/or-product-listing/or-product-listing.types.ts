@@ -5,7 +5,7 @@ export enum OrProductListingButtonText {
 }
 
 export interface OrProductListingProps {
-  products: Product[];
+  products?: Product[];
   loading?: boolean;
   onLoadMore?: () => void;
   onAddProductToCart: (product: Product) => void;

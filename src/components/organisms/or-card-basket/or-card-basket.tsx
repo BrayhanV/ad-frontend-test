@@ -1,12 +1,12 @@
 import { AtIcon } from "@/components/atoms/at-icon/at-icon";
-import { MlCardBasketProps } from "./ml-card-basket.types";
+import { OrCardBasketProps } from "./or-card-basket.types";
 import {
   MlProductImage,
   MlProductImageNewLabel,
   MlProductImageVariant,
-} from "../ml-product-image";
+} from "../../molecules/ml-product-image";
 
-export const MlCardBasket = ({ product, onClickButton }: MlCardBasketProps) => {
+export const OrCardBasket = ({ product, onClickButton }: OrCardBasketProps) => {
   return (
     <article className="flex flex-col px-4 py-5 gap-4 border-b-[0.5px] last:border-0 border-stroke-secondary">
       <div className="flex flex-row items-start gap-4 md:gap-6">

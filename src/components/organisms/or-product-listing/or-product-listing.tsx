@@ -1,8 +1,5 @@
 "use client";
-import {
-  MlProductCard,
-  MlProductCardSkeleton,
-} from "@/components/molecules/ml-product-card";
+import { MlProductCard } from "@/components/molecules/ml-product-card";
 import {
   OrProductListingButtonText,
   OrProductListingProps,
@@ -10,9 +7,10 @@ import {
 import { useCallback, useRef } from "react";
 import { useCartStore } from "@/stores/cart";
 import { AtButton, AtButtonColor } from "@/components/atoms/at-button";
+import { MlProductCardSkeleton } from "@/components/molecules/ml-product-card-skeleton";
 
 export const OrProductListing = ({
-  products,
+  products = [],
   loading,
   onLoadMore,
   onAddProductToCart,
@@ -44,8 +42,8 @@ export const OrProductListing = ({
         ))}
         {loading && (
           <>
-            <li>
-              <div ref={bottomRef} />
+            <li className="-mr-6 md:-mr-12">
+              <div ref={bottomRef} data-testid="scroll-div" />
             </li>
             {[...Array(3)].map((_, index) => (
               <li key={index}>

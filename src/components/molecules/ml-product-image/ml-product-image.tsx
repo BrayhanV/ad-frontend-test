@@ -9,12 +9,10 @@ export const MlProductImage = ({
   alt,
   isNew,
   newLabel,
-  variant,
+  variant = MlProductImageVariant.CATALOG,
 }: MlProductImageProps) => {
   return (
-    <div
-      className={`relative ${MlProductImageClasses[variant ?? MlProductImageVariant.CATALOG]}`}
-    >
+    <div className={`relative ${MlProductImageClasses[variant]}`}>
       {isNew && (
         <span className="absolute top-3 left-3 z-10 px-3 py-2 bg-stone-100 text-primary text-sm rounded-[4px]">
           {newLabel}
@@ -22,7 +20,7 @@ export const MlProductImage = ({
       )}
       <figure>
         <img
-          className={`object-cover ${MlProductImageClasses[variant ?? MlProductImageVariant.CATALOG]}`}
+          className={`object-cover ${MlProductImageClasses[variant]}`}
           src={src}
           alt={alt}
         />

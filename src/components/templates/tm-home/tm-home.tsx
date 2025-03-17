@@ -3,8 +3,12 @@ import { Product } from "@/models/Product";
 import { AtSelect } from "@/components/atoms/at-select/at-select";
 import { OrProductListing } from "@/components/organisms/or-product-listing";
 import { useAsyncState } from "@/hooks";
-import { DEFAULT_GENRE, getGames } from "@/services/games";
-import { GetGamesParams, GetGamesResponse } from "@/services/games/types";
+import {
+  DEFAULT_GENRE,
+  getGames,
+  GetGamesParams,
+  GetGamesResponse,
+} from "@/services/games";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
 import { useShallow } from "zustand/shallow";
@@ -107,7 +111,7 @@ export const TmHome = () => {
 
       <OrProductListing
         loading={loading}
-        products={gamesData?.games ?? []}
+        products={gamesData?.games}
         onAddProductToCart={handleAddToCart}
         onLoadMore={canLoadMore ? handleLoadMore : undefined}
       />

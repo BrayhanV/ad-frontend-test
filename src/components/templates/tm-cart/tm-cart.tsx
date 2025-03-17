@@ -4,7 +4,7 @@ import { TmCartProductLabels, TmCartTitles } from "./tm-cart.types";
 import { useShallow } from "zustand/shallow";
 import { useCallback, useMemo } from "react";
 import { useCartStore } from "@/stores/cart";
-import { MlCardBasket } from "@/components/molecules/ml-card-basket";
+import { OrCardBasket } from "@/components/organisms/or-card-basket";
 import { Product } from "@/models/Product";
 import {
   OrOrderSummary,
@@ -60,7 +60,7 @@ export const TmCart = () => {
             <ul className="flex flex-col gap-0">
               {productsArray.map((product) => (
                 <li key={product.id}>
-                  <MlCardBasket
+                  <OrCardBasket
                     product={product}
                     onClickButton={handleRemoveProduct}
                   />

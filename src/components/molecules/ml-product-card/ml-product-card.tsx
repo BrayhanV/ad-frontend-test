@@ -3,7 +3,10 @@ import {
   MlProductImageNewLabel,
   MlProductImageVariant,
 } from "../ml-product-image";
-import { MlProductCardProps } from "./ml-product-card.types";
+import {
+  MlProductCardButtonText,
+  MlProductCardProps,
+} from "./ml-product-card.types";
 import {
   AtButton,
   AtButtonColor,
@@ -40,7 +43,9 @@ export const MlProductCard = ({
         color={AtButtonColor.PRIMARY}
         onClick={() => onClickButton(product)}
       >
-        {isProductInCart ? "REMOVE" : "ADD TO CART"}
+        {isProductInCart
+          ? MlProductCardButtonText.REMOVE
+          : MlProductCardButtonText.ADD_TO_CART}
       </AtButton>
     </article>
   );
