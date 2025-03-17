@@ -4,7 +4,11 @@ import {
   OrOrderSummaryTitle,
 } from "./or-order-summary.types";
 import { TmCartButtonLabel } from "@/components/templates/tm-cart/tm-cart.types";
-import { AtButton, AtButtonColor } from "@/components/atoms/at-button";
+import {
+  AtButton,
+  AtButtonColor,
+  AtButtonVariant,
+} from "@/components/atoms/at-button";
 
 export const OrOrderSummary = ({
   total,
@@ -48,7 +52,10 @@ export const OrOrderSummary = ({
           </div>
         </div>
       </div>
-      <AtButton color={AtButtonColor.SECONDARY}>
+      <AtButton
+        variant={AtButtonVariant.DESKTOP}
+        color={AtButtonColor.SECONDARY}
+      >
         {TmCartButtonLabel.CHECKOUT}
       </AtButton>
     </section>
